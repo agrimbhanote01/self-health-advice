@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self Health Advice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      color: #333333;
+    }
+
+    header {
+      background-color: #1e3d59;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #b0c4de;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 850px;
+      margin: 25px auto;
+    }
+
+    .warning-note {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      color: #856404;
+      padding: 12px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .issue-card {
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      margin-bottom: 15px;
+    }
+
+    .issue-btn {
+      width: 100%;
+      background-color: #ffffff;
+      border: none;
+      padding: 15px 20px;
+      text-align: left;
+      font-size: 16px;
+      font-weight: bold;
+      color: #1e3d59;
+      cursor: pointer;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .issue-btn:hover {
+      background-color: #f5f5f5;
+    }
+
+    .issue-details {
+      display: none;
+      padding: 15px 20px;
+    }
+
+    .issue-details p {
+      font-size: 14px;
+      color: #555555;
+      margin-top: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    table, th, td {
+      border: 1px solid #dddddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    th {
+      background-color: #f7f9fa;
+      color: #1e3d59;
+    }
+
+    .advice {
+      background-color: #eef7ee;
+      padding: 10px;
+      font-size: 13px;
+      color: #2e7d32;
+      border: 1px solid #c8e6c9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+      color: #666666;
+      border-top: 1px solid #dddddd;
+      margin-top: 40px;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Self Health Advice</h1>
+    <p>General Home Medicine Guide Based on Age Group</p>
+  </header>
+
+  <div class="container">
+    
+    <div class="warning-note">
+      <b>Important Disclaimer:</b> This website is an educational project created for general awareness. Always consult a qualified medical professional before taking any medicines.
+    </div>
+
+    <!-- 1. Fever -->
+    <div class="issue-card">
+      <button class="issue-btn" onclick="toggleIssue('fever')">&#9654; 1. Fever</button>
+      <div class="issue-details" id="fever">
+        <p>A temporary increase in average body temperature, usually triggered by a response to an infection.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Age Group</th>
+              <th>Common Medicine</th>
+              <th>Key Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Children (Under 12 yrs)</td>
+              <td>Paracetamol Drops or Syrup</td>
+              <td>Dosage must strictly follow weight and pediatric guidelines. Never give Aspirin.</td>
+            </tr>
+            <tr>
+              <td>Adults (12 to 60 yrs)</td>
+              <td>Paracetamol (500mg or 650mg)</td>
+              <td>Maintain at least 4 to 6 hours between doses; do not exceed daily limits.</td>
+            </tr>
+            <tr>
+              <td>Elderly (60+ yrs)</td>
+              <td>Paracetamol (500mg)</td>
+              <td>Consult a doctor if liver or kidney history exists.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="advice">
+          <b>Home Care:</b> Rest well, place cool damp cloths on the forehead, and consume plenty of water.
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Headache -->
+    <div class="issue-card">
+      <button class="issue-btn" onclick="toggleIssue('headache')">&#9654; 2. Headache</button>
+      <div class="issue-details" id="headache">
+        <p>Pain arising from the head or upper neck caused by tension, eye strain, or dehydration.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Age Group</th>
+              <th>Common Medicine</th>
+              <th>Key Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Children (Under 12 yrs)</td>
+              <td>Paracetamol Syrup</td>
+              <td>Check if the child has screen strain or skipped meals before giving medicine.</td>
+            </tr>
+            <tr>
+              <td>Adults (12 to 60 yrs)</td>
+              <td>Ibuprofen (400mg) or Paracetamol (650mg)</td>
+              <td>Take after eating food to prevent stomach acidity.</td>
+            </tr>
+            <tr>
+              <td>Elderly (60+ yrs)</td>
+              <td>Paracetamol (500mg)</td>
+              <td>Avoid heavy pain relievers if having high blood pressure.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="advice">
+          <b>Home Care:</b> Lie down in a dark, quiet room and drink 1-2 glasses of water.
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Stomach Acidity -->
+    <div class="issue-card">
+      <button class="issue-btn" onclick="toggleIssue('acidity')">&#9654; 3. Stomach Acidity</button>
+      <div class="issue-details" id="acidity">
+        <p>Burning sensation in the lower chest area caused by acid moving up into the food pipe.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Age Group</th>
+              <th>Common Medicine</th>
+              <th>Key Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Children (Under 12 yrs)</td>
+              <td>Pediatric Antacid Suspension</td>
+              <td>Only give under pediatric advice; often caused by food sensitivity.</td>
+            </tr>
+            <tr>
+              <td>Adults (12 to 60 yrs)</td>
+              <td>Liquid Antacid Gel or Pantoprazole</td>
+              <td>Antacid syrups give immediate relief; Pantoprazole is taken empty stomach in the morning.</td>
+            </tr>
+            <tr>
+              <td>Elderly (60+ yrs)</td>
+              <td>Antacid Syrups (Aluminium/Magnesium Hydroxide)</td>
+              <td>Do not take immediately before or after prescription heart medicines.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="advice">
+          <b>Home Care:</b> Avoid lying down immediately after eating and sip cold milk or water.
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Diarrhea -->
+    <div class="issue-card">
+      <button class="issue-btn" onclick="toggleIssue('diarrhea')">&#9654; 4. Diarrhea</button>
+      <div class="issue-details" id="diarrhea">
+        <p>Frequent, loose or watery bowel movements leading quickly to loss of electrolytes.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Age Group</th>
+              <th>Common Medicine</th>
+              <th>Key Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Children (Under 12 yrs)</td>
+              <td>WHO-ORS (Oral Rehydration Solution) & Zinc Syrup</td>
+              <td>Anti-diarrheal tablets are strictly not recommended for children.</td>
+            </tr>
+            <tr>
+              <td>Adults (12 to 60 yrs)</td>
+              <td>ORS Packets, Loperamide</td>
+              <td>ORS replaces body minerals; Loperamide is only for non-infectious loose stools.</td>
+            </tr>
+            <tr>
+              <td>Elderly (60+ yrs)</td>
+              <td>ORS Packets & Probiotic Capsules</td>
+              <td>Ensure continuous hydration to prevent weakness or fainting.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="advice">
+          <b>Home Care:</b> Eat simple foods like curd rice, bananas, and boiled potatoes.
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Nausea & Vomiting -->
+    <div class="issue-card">
+      <button class="issue-btn" onclick="toggleIssue('nausea')">&#9654; 5. Nausea & Vomiting</button>
+      <div class="issue-details" id="nausea">
+        <p>An uneasy feeling in the stomach accompanied by an urge to vomit, commonly due to indigestion or motion sickness.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Age Group</th>
+              <th>Common Medicine</th>
+              <th>Key Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Children (Under 12 yrs)</td>
+              <td>Domperidone Oral Drops / Syrup</td>
+              <td>Must be prescribed based on the child's exact age and weight.</td>
+            </tr>
+            <tr>
+              <td>Adults (12 to 60 yrs)</td>
+              <td>Ondansetron (4mg) or Domperidone (10mg)</td>
+              <td>Best taken 30 minutes before a meal or travel.</td>
+            </tr>
+            <tr>
+              <td>Elderly (60+ yrs)</td>
+              <td>Ondansetron (4mg)</td>
+              <td>Watch for mild constipation or headache as a side effect.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="advice">
+          <b>Home Care:</b> Suck on small pieces of fresh ginger or lemon, and avoid strong cooking smells.
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Sore Throat -->
+    <div class="issue-card">
+      <button class="issue-btn" onclick="toggleIssue('sorethroat')">&#9654; 6. Sore Throat</button>
+      <div class="issue-details" id="sorethroat">
+        <p>Pain, scratchiness, or irritation of the throat that often worsens when swallowing.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Age Group</th>
+              <th>Common Medicine</th>
+              <th>Key Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Children (Under 12 yrs)</td>
+              <td>Warm Salt Water Rinse or Throat Lozenges</td>
+              <td>Do not give hard lozenges to children under 4 years due to choking risk.</td>
+            </tr>
+            <tr>
+              <td>Adults (12 to 60 yrs)</td>
+              <td>Antiseptic Lozenges (e.g., Strepsils) or Paracetamol</td>
+              <td>Paracetamol helps if there is associated difficulty or pain while swallowing.</td>
+            </tr>
+            <tr>
+              <td>Elderly (60+ yrs)</td>
+              <td>Warm Saline Gargles & Medicated Lozenges</td>
+              <td>Check sugar content of throat lozenges if diabetic.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="advice">
+          <b>Home Care:</b> Gargle with warm salt water 3 times a day and drink warm honey-ginger tea.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Project Name: Self Health Advice</p>
+    <p>Made by Agrim</p>
+  </footer>
+
+  <script>
+    function toggleIssue(id) {
+      var details = document.getElementById(id);
+      
+      if (details.style.display === "block") {
+        details.style.display = "none";
+      } else {
+        details.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
